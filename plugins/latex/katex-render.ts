@@ -6,14 +6,14 @@ import katex from '../../vendor/katex/katex.mjs';
 import type { FormulaRenderer } from '../../shared/types.js';
 
 // The host app sets globalThis.__MP_EXT_BASE__ to the plugin's deployed origin
-// before importing the (bundled) plugin, so external assets (KaTeX CSS/fonts)
+// before importing the (bundled) plugin, so external assets (KaTeX fonts)
 // resolve correctly even when the module is loaded via a blob URL. Falls back
 // to import.meta.url when the global is absent.
-const hostBase: string | undefined = (globalThis as { __MP_EXT_BASE__?: string }).__MP_EXT_BASE__;
-const katexBase =
-  (hostBase ? hostBase.replace(/\/?$/, '/') : new URL('../../vendor/katex/', import.meta.url).href) + 'vendor/katex/';
-export const katexBaseUrl = katexBase;
-const KATEX_CSS_URL = katexBase + 'katex.min.css';
+function katexBaseUrl(): string {
+  const hostBase = (globalThis as { __MP_EXT_BASE__?: string }).__MP_EXT_BASE__;
+  const base = hostBase ? hostBase.replace(/\/?$/, '/') : new URL('../../vendor/katex/', import.meta.url).href;
+  return base + 'vendor/katex/';
+}
 
 export function stripDelims(tex: string): string {
   const t = tex.trim();
@@ -23,10 +23,11 @@ export function stripDelims(tex: string): string {
 }
 
 export const latexFormulaRenderer: FormulaRenderer = {
-  // The label layer injects this once into the page; the browser fetches the
-  // KaTeX stylesheet (and its fonts) from the deployed origin.
+  // The full KaTeX stylesheet is inlined into this bundle at build time (no
+  // separate request); font URLs keep a __MP_KATEX_BASE__ placeholder that is
+  // resolved here to the host-provided origin so fonts still load from the CDN.
   css(): string {
-    return `@import url(${KATEX_CSS_URL});`;
+    return __KATEX_CSS__.replace(/__MP_KATEX_BASE__/g, katexBaseUrl());
   },
   toHTML(tex: string): string {
     try {
