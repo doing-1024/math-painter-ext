@@ -5,7 +5,16 @@
     "description": "Directed arrow / vector tool with an arrowhead.",
     "version": "1.0.0",
     "minApi": 1,
-    "entry": "plugins/arrow/index.js",
+    "entry": "arrow/index.js",
+    "author": "doing-1024"
+  },
+  {
+    "name": "latex",
+    "title": "LaTeX",
+    "description": "LaTeX math label (rendered via KaTeX, vendored on the same CDN).",
+    "version": "1.0.0",
+    "minApi": 1,
+    "entry": "latex/index.js",
     "author": "doing-1024"
   }
 ]

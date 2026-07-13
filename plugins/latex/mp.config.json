@@ -1,0 +1,9 @@
+{
+  "name": "latex",
+  "title": "LaTeX",
+  "description": "LaTeX math label (rendered via KaTeX, vendored on the same CDN).",
+  "version": "1.0.0",
+  "minApi": 1,
+  "entry": "plugins/latex/index.js",
+  "author": "doing-1024"
+}

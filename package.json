@@ -5,9 +5,12 @@
   "type": "module",
   "description": "Official plugin repository for math-painter (hosted on Cloudflare Pages).",
   "scripts": {
-    "build": "node build.mjs"
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "esbuild": "^0.25.0",
+    "katex": "^0.16.0",
     "typescript": "^5.5.0"
   }
 }
