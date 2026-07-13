@@ -9,6 +9,11 @@
 - [API 参考](./api.md) — 冻结的 `MathPainter` 接口，以及 `ShapeDefinition`、`Tool`、`EditorContext`、`FormulaRenderer` 的完整契约。
 - [示例](./examples.md) — `arrow`（形状 + 工具）与 `latex`（仅贡献公式渲染器）两个完整可运行示例。
 
+## 官方插件 / Official plugins
+
+- `arrow`（快捷键 `y`）、`latex`（公式渲染器）、`export`（快捷键 `P`，SVG/PNG 导出）。
+  详见仓库根 `plugins.json` 与 `README.md`。
+
 ## 仓库
 
 - 插件仓库：<https://github.com/doing-1024/math-painter-ext>

@@ -27,6 +27,14 @@ External assets (CSS/fonts) are fetched from `globalThis.__MP_EXT_BASE__` — se
 `math-painter/EXTENSIONS.md`. The host contract `shared/types.ts` mirrors
 `math-painter/src/core/extension.ts` — keep the two in sync.
 
+## Available plugins / 已有插件
+
+| 插件 | 说明 |
+| --- | --- |
+| `arrow` | 带箭头的向量/有向线段工具（快捷键 `y`） |
+| `latex` | 内置标签的 KaTeX 公式渲染器（无单独形状/工具），标签里写 `$...$` 即排版 |
+| `export` | SVG / PNG 导出：白底黑字、自动裁剪到内容边界（快捷键 `P`，也有工具栏按钮） |
+
 ## Plugin development guide / 插件开发文档
 
 Full plugin-development docs live in **[`docs/`](./docs/README.md)**, split by

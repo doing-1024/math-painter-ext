@@ -104,10 +104,22 @@ export interface FormulaRenderer {
   toHTML(tex: string): string;
 }
 
+export interface ExportOptions {
+  background?: string;
+  ink?: string;
+  padding?: number;
+}
+
 export interface MathPainter {
   readonly apiVersion: number;
   registerShape<T extends Shape>(definition: ShapeDefinition<T>): void;
   registerTool(tool: Tool): void;
   bindKey(key: string, toolId: string): void;
   setFormulaRenderer(renderer: FormulaRenderer | null): void;
+  /** Render the current scene to an SVG string (white background, dark ink,
+   *  auto-cropped to content bounds). Used by export plugins. */
+  renderSVG(opts?: ExportOptions): string;
+  /** Render the current scene to a PNG-ready canvas (white background, black
+   *  ink, auto-cropped). Returns null when the scene is empty. */
+  renderCanvas(opts?: ExportOptions): HTMLCanvasElement | null;
 }

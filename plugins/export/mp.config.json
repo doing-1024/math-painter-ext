@@ -1,0 +1,9 @@
+{
+  "name": "export",
+  "title": "Export",
+  "description": "SVG / PNG export: white background, black ink, auto-cropped to content. Press P or click the Export button.",
+  "version": "1.0.0",
+  "minApi": 2,
+  "entry": "plugins/export/index.js",
+  "author": "doing-1024"
+}

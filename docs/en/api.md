@@ -24,6 +24,8 @@ export interface MathPainter {
 | `registerTool(tool)` | Register a tool (auto-appears in the toolbar) |
 | `bindKey(key, toolId)` | Bind a key to a registered tool |
 | `setFormulaRenderer(r)` | Contribute a formula renderer (e.g. KaTeX); pass `null` to uninstall |
+| `renderSVG(opts?)` | Render the current scene to an SVG string (white background, dark ink, auto-cropped to content bounds) |
+| `renderCanvas(opts?)` | Render the current scene to a PNG-ready canvas (white background, black ink, auto-cropped); returns `null` when the scene is empty |
 
 **Key-binding convention:** all left-half keys (v d s c b a g t w, plus actions
 x r z e f q 1) are taken by built-ins, so plugins should use a free right-half

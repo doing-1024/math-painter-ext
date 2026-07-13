@@ -11,6 +11,11 @@ fast.
 - [API Reference](./api.md) — the frozen `MathPainter` interface plus the full `ShapeDefinition`, `Tool`, `EditorContext`, and `FormulaRenderer` contracts.
 - [Examples](./examples.md) — the `arrow` (shape + tool) and `latex` (renderer-only) worked examples.
 
+## Official plugins
+
+- `arrow` (key `y`), `latex` (formula renderer), `export` (key `P`, SVG/PNG export).
+  See the root `plugins.json` and `README.md`.
+
 ## Repo
 
 - Plugin repo: <https://github.com/doing-1024/math-painter-ext>

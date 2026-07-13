@@ -23,6 +23,8 @@ export interface MathPainter {
 | `registerTool(tool)` | 注册一个工具（自动出现在工具栏） |
 | `bindKey(key, toolId)` | 把按键绑定到已注册的工具 |
 | `setFormulaRenderer(r)` | 贡献一个公式渲染器（如 KaTeX）；传 `null` 可卸载 |
+| `renderSVG(opts?)` | 把当前场景渲染为 SVG 字符串（白底、近黑墨、自动裁剪到内容边界） |
+| `renderCanvas(opts?)` | 把当前场景渲染为 PNG 画布（白底黑字、自动裁剪）；场景为空返回 `null` |
 
 **快捷键约定**：所有左侧按键（v d s c b a g t w，以及动作 x r z e f q 1）都已被
 内置占用，插件应使用右侧空闲键（如 `y`、`m`）。内置绑定优先于插件绑定。
