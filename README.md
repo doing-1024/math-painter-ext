@@ -29,9 +29,13 @@ External assets (CSS/fonts) are fetched from `globalThis.__MP_EXT_BASE__` — se
 
 ## Plugin development guide / 插件开发文档
 
-A full bilingual (中文 / English) guide covering the frozen API, `ShapeDefinition`,
-`Tool`, `EditorContext`, external-asset URLs, the build, and the official index
-lives in **[PLUGINS.md](./PLUGINS.md)**. Read it before authoring a plugin.
+Full plugin-development docs live in **[`docs/`](./docs/README.md)**, split by
+language for the best experience:
+
+- 中文: **[`docs/zh/`](./docs/zh/README.md)** — 快速上手 / API 参考 / 示例
+- English: **[`docs/en/`](./docs/en/README.md)** — Quick Start / API Reference / Examples
+
+Read them before authoring a plugin.
 
 ## Add a plugin
 
@@ -62,4 +66,5 @@ The deployed base URL must match what the app expects
 
 ---
 
-插件开发完整文档（中英文双语）见 **[PLUGINS.md](./PLUGINS.md)**。
+插件开发完整文档见 **[`docs/zh/`](./docs/zh/README.md)**（中文）与
+**[`docs/en/`](./docs/en/README.md)**（English）。
