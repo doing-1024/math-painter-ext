@@ -97,9 +97,17 @@ export interface Tool {
   drawOverlay?(overlay: Overlay): void;
 }
 
+export interface FormulaRenderer {
+  /** KaTeX CSS (or an `@import` rule) required to render the HTML. */
+  css(): string;
+  /** Render inline TeX to an HTML string (no wrapper element). */
+  toHTML(tex: string): string;
+}
+
 export interface MathPainter {
   readonly apiVersion: number;
   registerShape<T extends Shape>(definition: ShapeDefinition<T>): void;
   registerTool(tool: Tool): void;
   bindKey(key: string, toolId: string): void;
+  setFormulaRenderer(renderer: FormulaRenderer | null): void;
 }

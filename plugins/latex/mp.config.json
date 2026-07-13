@@ -1,7 +1,7 @@
 {
   "name": "latex",
   "title": "LaTeX",
-  "description": "LaTeX math label (rendered via KaTeX, vendored on the same CDN).",
+  "description": "KaTeX formula renderer for built-in labels: any label text with $...$ is typeset. Adds no separate shape or tool.",
   "version": "1.0.0",
   "minApi": 1,
   "entry": "plugins/latex/index.js",
