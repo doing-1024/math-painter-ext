@@ -27,6 +27,12 @@ External assets (CSS/fonts) are fetched from `globalThis.__MP_EXT_BASE__` — se
 `math-painter/EXTENSIONS.md`. The host contract `shared/types.ts` mirrors
 `math-painter/src/core/extension.ts` — keep the two in sync.
 
+## Plugin development guide / 插件开发文档
+
+A full bilingual (中文 / English) guide covering the frozen API, `ShapeDefinition`,
+`Tool`, `EditorContext`, external-asset URLs, the build, and the official index
+lives in **[PLUGINS.md](./PLUGINS.md)**. Read it before authoring a plugin.
+
 ## Add a plugin
 
 1. Copy `plugins/arrow` to `plugins/<your-name>`.
@@ -53,3 +59,7 @@ Deploy `dist/` to Cloudflare Pages:
 The deployed base URL must match what the app expects
 (`https://mp-ext.doi.l.cd` by default; overridable in-app via the
 `math-painter:plugin-base` localStorage setting for mirrors).
+
+---
+
+插件开发完整文档（中英文双语）见 **[PLUGINS.md](./PLUGINS.md)**。
