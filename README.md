@@ -51,5 +51,5 @@ Deploy `dist/` to Cloudflare Pages:
 - Or CLI: `npx wrangler pages deploy dist`.
 
 The deployed base URL must match what the app expects
-(`https://ext.math-painter.pages.dev` by default; overridable in-app via the
+(`https://mp-ext.doi.l.cd` by default; overridable in-app via the
 `math-painter:plugin-base` localStorage setting for mirrors).
