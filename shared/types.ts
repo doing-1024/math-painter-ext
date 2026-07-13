@@ -82,6 +82,9 @@ export interface EditorContext {
 
 export interface Tool {
   id: string;
+  /** Short toolbar/legend label (e.g. the tool's key). Plugin tools set this
+   *  so the host toolbar does not fall back to the first letter of the id. */
+  label?: string;
   cursor?: string;
   activate?(ctx: EditorContext): void;
   deactivate?(ctx: EditorContext): void;

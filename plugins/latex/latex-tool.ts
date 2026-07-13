@@ -5,6 +5,7 @@ import { setRedraw } from './katex-render.js';
 
 export class LaTeXTool implements Tool {
   id = 'latex';
+  label = 'M';
   cursor = 'text';
 
   activate(ctx: EditorContext): void {

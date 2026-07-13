@@ -23,7 +23,9 @@ function head(b: Vec, dir: Vec, scale: number) {
 
 export const arrowShapeDef: ShapeDefinition<ArrowShape> = {
   type: 'arrow',
-  anchors: (s) => [s.a, s.b],
+  // Only the tail gets a grab dot; an anchor at the head would cover the
+  // arrowhead. The whole shaft stays selectable via the line hit-test.
+  anchors: (s) => [s.a],
   hit: (s, world, tol) => distToSegment(world, s.a, s.b) < tol,
   draw: (ctx, s, opts) => {
     ctx.strokeStyle = s.style.stroke;

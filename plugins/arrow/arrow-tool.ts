@@ -4,6 +4,7 @@ import { DEFAULT_STYLE } from '../../shared/style.js';
 
 export class ArrowTool implements Tool {
   id = 'arrow';
+  label = 'Y';
   cursor = 'crosshair';
   private start: Vec | null = null;
   private preview: Vec | null = null;
