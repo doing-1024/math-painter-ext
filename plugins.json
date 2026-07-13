@@ -1,0 +1,11 @@
+[
+  {
+    "name": "arrow",
+    "title": "Arrow",
+    "description": "Directed arrow / vector tool with an arrowhead.",
+    "version": "1.0.0",
+    "minApi": 1,
+    "entry": "plugins/arrow/index.js",
+    "author": "doing-1024"
+  }
+]
